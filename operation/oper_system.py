@@ -14,3 +14,13 @@ def sacar():
             break
         else:
             print('Insira apenas números.')
+
+    if Saldo_disp <= saldo:
+        saldo -= Saldo_disp
+        print('Saldo disponível!')
+        print(f'Você retirou: {locale.currency(Saldo_disp, grouping=True)}')
+        print('Obrigado e volte sempre.')  
+    else:
+        print('Valor excede o saldo!')   
+
+
