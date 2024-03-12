@@ -23,4 +23,21 @@ def sacar():
     else:
         print('Valor excede o saldo!')   
 
+def depositar():
+    global saldo 
+    valor_deposito = float(input('Digite o valor de depósito: '))
+    saldo += valor_deposito
+    print(f'Você depositou: {locale.currency(valor_deposito, grouping=True)}')
+    
+    print('Transação efetuada com sucesso!') 
 
+
+def mostrar_saldo():
+    print(f'Saldo atual: {locale.currency(saldo, grouping=True)}')
+
+
+sacar()
+        
+depositar()
+
+mostrar_saldo()
